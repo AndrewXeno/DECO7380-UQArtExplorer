@@ -1,0 +1,22 @@
+<ion-view view-title="My Collection">
+  <ion-nav-buttons side="secondary">
+    <a class="button button-icon icon ion-ios-upload-outline"></a>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="collection in collections" type="item-text-wrap" href="#/tab/collection/{{collection.id}}">
+        <img ng-src="{{collection.image}}">
+        <h2>{{collection.title}}</h2>
+        <p>{{collection.artist}} ({{collection.creationYear}})</p>
+        <p>{{collection.area}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        
+        <ion-option-button class="button-assertive" ng-click="remove(collection)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

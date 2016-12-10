@@ -1,0 +1,35 @@
+<ion-view view-title="UQ Art Explorer">
+  <ion-content>
+    <ion-slides  options="options" slider="data.slider" style="width:100vw;height:50vw">
+      <ion-slide-page>
+        <img src="img/UQAM_photo1.jpg" style="width:100vw;height:50vw">
+      </ion-slide-page>
+      <ion-slide-page>
+        <img src="img/UQAM_photo2.jpg" style="width:100vw;height:50vw">
+      </ion-slide-page>
+      <ion-slide-page>
+        <img src="img/UQAM_photo3.jpg" style="width:100vw;height:50vw">
+      </ion-slide-page>
+    </ion-slides>
+
+  	<div class="item item-divider">Exhibitions and Events</div>
+    <ion-list>
+      <ion-item class="item item-avatar item-icon-right" ng-repeat="exhibition in exhibitions" type="item-text-wrap" href="#/tab/home/exhibitions/{{exhibition.id}}">
+        <img ng-src="{{exhibition.image}}">
+        <h2>{{exhibition.name}}</h2>
+        <p>{{exhibition.duration}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+    <div class="item item-divider">New Artworks</div>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left item-icon-right" ng-repeat="collection in collections" type="item-text-wrap" href="#/tab/home/{{collection.id}}">
+        <img ng-src="{{collection.image}}">
+        <h2>{{collection.title}}</h2>
+        <p>{{collection.artist}} ({{collection.creationYear}})</p>
+        <p>{{collection.area}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

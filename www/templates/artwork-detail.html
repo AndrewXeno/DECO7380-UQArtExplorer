@@ -1,0 +1,27 @@
+<ion-view view-title="{{collection.title}}">
+  <ion-nav-buttons side="secondary">
+    <a class="button button-icon icon ion-ios-star-outline"></a>
+    <a class="button button-icon icon ion-ios-location-outline" href="#/tab/artwork-map"></a>
+    <a class="button button-icon icon ion-ios-upload-outline"></a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="item item-image">
+    <img ng-src="{{collection.image}}">
+    </div>
+    <ion-item class = "item-divider">Artist Information</ion-item>
+    <ion-item class = "item-text-wrap item-icon-right">
+      <h2>{{collection.artist}}</h2>
+      <p>{{collection.artistDesc}}</p>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-item>
+    <ion-item class = "item-divider">Artwork Information</ion-item>
+    <ion-item class = "item-text-wrap">
+      <h2><strong>{{collection.title}}</strong></h2>
+      <p><strong>Creation Year:</strong> {{collection.creationYear}}</p>
+      <p><strong>Collection Area:</strong> {{collection.area}}</p>
+      <p><strong>Size:</strong> {{collection.size}}</p>
+      <p><strong>Accession No:</strong> {{collection.accession}}</p>
+      <p><strong>Description:</strong> {{collection.description}}</p>
+    </ion-item>
+  </ion-content>
+</ion-view>

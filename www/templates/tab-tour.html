@@ -1,0 +1,48 @@
+<ion-view view-title="Self-led Tour">
+  <ion-nav-buttons side="secondary">
+    <a class="button button-icon icon ion-qr-scanner" on-touch="scanBarcode()"></a>
+    <a class="button button-icon icon ion-map" href="#/tab/tour-map"></a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="item item-divider">Audio Guidance</div>
+      <ion-audio-track track="track">
+        <div class="item item-thumbnail-left">
+            <img src="{{track.art}}">
+            <h2>{{track.title}}</h2>
+            <p>{{track.artist}}</p>
+            <ion-audio-controls>
+              <a class="button button-icon icon" ion-audio-play></a>
+              <ion-spinner icon="ios"></ion-spinner>
+            </ion-audio-controls>
+        </div>
+        <div class="item">
+          <ion-audio-progress-bar track="track" display-time></ion-audio-progress-bar>
+        </div>
+      </ion-audio-track>
+
+    <div class="item item-divider">Introduction</div>
+
+    <div class="item item-text-wrap">
+    <h2>We who love: The Nolan slates</h2>
+      <p>21 April – 24 July 2016</p>
+      <div class="item item-image">
+        <img src="img/UQAM_photo2.jpg">
+      </div>
+      <br>
+      <p>We who love: The Nolan slates is a window into the world of renowned Australian painter Sidney Nolan (1917–1992), reflecting a time of artistic experimentation and personal upheaval. From December 1941 to June 1942, Nolan made around 32 paintings on roofing slates. They reveal his distinctive preference for non-art materials, his avant-garde aspirations and his literary interests. Through the paintings, Nolan recorded the end of his marriage, new relationships with patrons John and Sunday Reed, and fears arising from the war in the Pacific. Concerned that there might not be ‘many more tomorrows’, Nolan painted the slates as a remarkable, even desperate, avowal of emotional and creative freedom.</p>
+      <br>
+      <p>Nolan’s deeply personal paintings on slate have been exhibited as a group just twice since 1943. We who love presents the most comprehensive display of the series ever assembled. Executed in rapid succession, the slates are a painted journal, declaring exultant love and lingering sorrow. Their rich, metaphorical imagery invites viewers into Nolan’s life at a pivotal moment in his development.</p>
+    </div>
+
+    <div class="item item-divider">Featured Artwork</div>
+    <ion-list>
+      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="collection in collections" type="item-text-wrap" href="#/tab/tour/{{collection.id}}">
+        <img ng-src="{{collection.image}}">
+        <h2>{{collection.title}}</h2>
+        <p>{{collection.artist}} ({{collection.creationYear}})</p>
+        <p>{{collection.area}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view view-title="Searching Results">
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="collection in collections" type="item-text-wrap" href="#/tab/results/{{collection.id}}">
+        <img ng-src="{{collection.image}}">
+        <h2>{{collection.title}}</h2>
+        <p>{{collection.artist}} ({{collection.creationYear}})</p>
+        <p>{{collection.area}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

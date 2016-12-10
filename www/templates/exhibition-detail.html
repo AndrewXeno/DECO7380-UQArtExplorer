@@ -1,0 +1,18 @@
+<ion-view view-title="{{exhibition.name}}">
+  <ion-nav-buttons side="secondary">
+    <a class="button button-icon icon ion-ios-upload-outline"></a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="item item-image">
+      <img ng-src="{{exhibition.image}}">
+    </div>
+    <ion-item class = "item-divider">Exhibition Information</ion-item>
+    <ion-item class = "item-text-wrap">
+      <h2><strong>{{exhibition.title}}</strong></h2>
+      <p><strong>Duration:</strong> {{exhibition.duration}}</p>
+      <p><strong>Curator:</strong> {{exhibition.curator}}</p>
+      <p><strong>Introduction:</strong></p>
+      <p>{{exhibition.introduction}}</p>
+    </ion-item>
+  </ion-content>
+</ion-view>
